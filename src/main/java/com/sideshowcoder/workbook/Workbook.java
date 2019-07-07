@@ -25,10 +25,9 @@ class Workbook {
     }
   }
 
-  public static Stream<String> fizzbuzz(int n) {
+  public static Stream<FizzBuzzBox> fizzbuzz(int n) {
     return IntStream.rangeClosed(1, n)
-        .mapToObj(FizzBuzzBox::new)
-        .map(FizzBuzzBox::toString);
+        .mapToObj(FizzBuzzBox::new);
   }
 
   public static void main(String... args) {
